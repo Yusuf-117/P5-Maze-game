@@ -1,0 +1,57 @@
+html
+{
+	height: 100%;	
+}
+#loginCard
+{
+	margin: auto;
+	margin-top: 200px;
+	height: 500px;
+	border-radius: 5px;
+	padding: 10px;
+	text-align:center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color:#ffffff;
+
+}
+
+
+.btn
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#b
+{
+	background-image: url("../images/space.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+.mcontainer{
+	text-align: center;
+	background-color: #95a5a6;
+	height: 100%;
+
+}
+
+body{
+	height: 100%;
+}
+
+#icon{
+	background-image: url("../images/icon.PNG");
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	margin:auto;
+}
+
+#about{
+	background-image: url("../images/about.PNG");
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	margin:auto;
+}
