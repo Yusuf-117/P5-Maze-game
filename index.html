@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maze Game</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+
+  <script src="sketch.js"></script>
+  <script src="classes.js"></script>
+</head>
+<body class="bg-[#293132] text-white min-h-screen">
+
+  <header class="border-b border-[#4F5165] bg-[#293132]">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div>
+        <h1 class="text-3xl font-bold">Maze Game</h1>
+        <p class="text-sm text-[#547AA5] mt-1">
+          Three levels - Bigger mazes - More mines
+        </p>
+      </div>
+
+      <nav class="flex gap-3">
+        <a href="#maze" class="px-4 py-2 rounded-lg bg-[#50D8D7] text-black font-semibold hover:opacity-90 transition">
+          Play
+        </a>
+        <a href="#info" class="px-4 py-2 rounded-lg border border-[#4F5165] hover:bg-[#4F5165] transition">
+          About
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10 space-y-10">
+
+    <section id="info" class="text-center max-w-3xl mx-auto space-y-4">
+      <h2 class="text-5xl font-bold leading-tight">
+        Maze Experience
+      </h2>
+
+      <p class="text-lg text-[#547AA5] leading-8">This maze is generated using recursive backtracking meaning the chances of identical mazes is low, just like the chances of unwinnable mazes.... But neither are impossible
+      </p>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-4">
+      <div class="bg-[#4F5165] rounded-xl p-5 text-center border border-[#4F5165]">
+        <p class="text-sm text-[#547AA5]">Levels</p>
+        <p class="text-3xl font-bold">3</p>
+      </div>
+      <div class="bg-[#4F5165] rounded-xl p-5 text-center border border-[#4F5165]">
+        <p class="text-sm text-[#547AA5]">Goal</p>
+        <p class="text-3xl font-bold">Green Cell</p>
+      </div>
+      <div class="bg-[#4F5165] rounded-xl p-5 text-center border border-[#4F5165]">
+        <p class="text-sm text-[#547AA5]">Controls</p>
+        <p class="text-3xl font-bold">Arrows</p>
+      </div>
+    </section>
+
+    <section id="maze" class="space-y-5">
+      <div class="text-center">
+        <h3 class="text-3xl font-bold">Play the Maze</h3>
+        <p class="text-[#547AA5] mt-2">
+          Guide the white square through increasingly larger mazes, avoid mines, collect hearts, and survive all 3 levels.
+        </p>
+      </div>
+
+      <div class="bg-[#4F5165] border border-[#4F5165] rounded-2xl p-6 flex flex-col items-center">
+        <div id="secondary" class="mb-4 w-full flex justify-center"></div>
+        <div id="main" class="max-w-full overflow-auto flex justify-center"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener("keydown", function (e) {
+      if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+      }
+    }, false);
+  </script>
+</body>
+</html>
